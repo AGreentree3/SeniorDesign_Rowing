@@ -35,6 +35,8 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var switchUI: UISwitch!
     
+    @IBAction func clickReadAction(_ sender: Any) {
+    }
     //Data
     var peripheralManager: CBPeripheralManager?
     var peripheral: CBPeripheral!
