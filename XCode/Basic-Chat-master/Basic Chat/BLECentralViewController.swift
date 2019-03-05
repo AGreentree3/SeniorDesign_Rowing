@@ -15,7 +15,7 @@ var txCharacteristic : CBCharacteristic?
 var rxCharacteristic : CBCharacteristic?
 var blePeripheral : CBPeripheral?
 var characteristicASCIIValue = NSString()
-
+var myString:String = "Null"
 
 
 class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, UITableViewDelegate, UITableViewDataSource{
@@ -74,7 +74,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         peripherals = []
         print("Now Scanning...")
         self.timer.invalidate()
-        centralManager?.scanForPeripherals(withServices: nil , options: [CBCentralManagerScanOptionAllowDuplicatesKey:false])
+        centralManager?.scanForPeripherals(withServices: [Advert_UUID] , options: [CBCentralManagerScanOptionAllowDuplicatesKey:false])
         Timer.scheduledTimer(timeInterval: 17, target: self, selector: #selector(self.cancelScan), userInfo: nil, repeats: false)
     }
     
@@ -154,7 +154,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         //Discovery callback
         peripheral.delegate = self
         //Only look for services that matches transmit uuid
-        peripheral.discoverServices([BLEService_UUID])
+        peripheral.discoverServices([TX_UUID, RX_UUID])
         //peripheral.discoverServices(nil)
         
         //Once connected, move to new view controller to manager incoming and outgoing data
@@ -229,7 +229,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         for characteristic in characteristics {
             //looks for the right characteristic
             
-            if characteristic.uuid.isEqual(BLE_Characteristic_uuid_Rx)  {
+            if characteristic.uuid.isEqual(Button1_Characteristic_uuid_Rx)  {
                 rxCharacteristic = characteristic
                 
                 //Once found, subscribe to the this particular characteristic...
@@ -239,7 +239,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
                 peripheral.readValue(for: characteristic)
                 print("Rx Characteristic: \(characteristic.uuid)")
             }
-            if characteristic.uuid.isEqual(BLE_Characteristic_uuid_Tx){
+            if characteristic.uuid.isEqual(LED_Characteristic_uuid_Tx){
                 txCharacteristic = characteristic
                 print("Tx Characteristic: \(characteristic.uuid)")
             }
@@ -253,11 +253,12 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
      */
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         if characteristic == rxCharacteristic {
-            if let ASCIIstring = NSString(data: characteristic.value!, encoding: String.Encoding.utf8.rawValue){
-                characteristicASCIIValue = ASCIIstring
-                print("Value Recieved: \((characteristicASCIIValue as String))")
-                NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: nil)
-            }
+            let data = rxCharacteristic!.value
+            var byte = [UInt8](repeating:0, count:data!.count)
+            data!.copyBytes(to: &byte, count: data!.count)
+            myString = "\(byte)"
+            print("Value Recieved: \(byte)")
+            NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: nil)
         }
     }
     

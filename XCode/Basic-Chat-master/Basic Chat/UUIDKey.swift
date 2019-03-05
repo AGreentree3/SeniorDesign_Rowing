@@ -7,7 +7,32 @@
 //
 
 import CoreBluetooth
-//Uart Service uuid
+//UUID for TI Button Service (not advertised in Project Zero)
+let kButtonService_UUID = "F0001120-0451-4000-B000-000000000000"
+let kButton1_Characteristic_uuid_Rx = "F0001121-0451-4000-B000-000000000000"
+let kButton2_Characteristic_uuid_Rx = "F0001122-0451-4000-B000-000000000000"
+
+//UUID for TI LED service (not advertised in Project Zero)
+let kLEDService_UUID = "F0001110-0451-4000-B000-000000000000"
+let kLED_Characteristic_uuid_Tx = "F0001111-0451-4000-B000-000000000000"
+let kLED_Characteristic_uuid_Rx = "F0001112-0451-4000-B000-000000000000"
+
+//UUID That is actually being advertised in simple peripheral
+let kAdvert_UUID = "FFF0"
+
+let MaxCharacters = 20
+
+let Advert_UUID = CBUUID(string: kAdvert_UUID)
+
+let RX_UUID = CBUUID(string: kButtonService_UUID)
+let Button1_Characteristic_uuid_Rx = CBUUID(string: kButton1_Characteristic_uuid_Rx)// (Property = Read from Button 1)
+let Button2_Characteristic_uuid_Rx = CBUUID(string: kButton2_Characteristic_uuid_Rx)// (Property = Read from Button 2)
+
+let TX_UUID = CBUUID(string: kLEDService_UUID)
+let LED_Characteristic_uuid_Tx = CBUUID(string: kLED_Characteristic_uuid_Tx)// (Property = Read from Button 1)
+let LED_Characteristic_uuid_Rx = CBUUID(string: kLED_Characteristic_uuid_Rx)// (Property = Read from Button 2)
+
+//REFERENCES:
 
 //Using simple peripheral program:
 //let kBLEService_UUID = "FFF0" // Peripheral has to be advertising this specific UUID
@@ -20,17 +45,11 @@ import CoreBluetooth
 //let kBLE_Characteristic_uuid_Rx = "F0001112-0451-4000-B000-000000000000"
 
 //UUID for TI Button service (not advertised in Project Zero)
-let kBLEService_UUID = "F0001120-0451-4000-B000-000000000000"
-let kBLE_Characteristic_uuid_Tx = "F0001121-0451-4000-B000-000000000000"
-let kBLE_Characteristic_uuid_Rx = "F0001122-0451-4000-B000-000000000000"
+//let kBLEService_UUID = "F0001120-0451-4000-B000-000000000000"
+//let kBLE_Characteristic_uuid_Tx = "F0001121-0451-4000-B000-000000000000"
+//let kBLE_Characteristic_uuid_Rx = "F0001122-0451-4000-B000-000000000000"
 
 //UUIDs for the Adafruit device:
 //let kBLEService_UUID = "6e400001-b5a3-f393-e0a9-e50e24dcca9e"
 //let kBLE_Characteristic_uuid_Tx = "6e400002-b5a3-f393-e0a9-e50e24dcca9e"
 //let kBLE_Characteristic_uuid_Rx = "6e400003-b5a3-f393-e0a9-e50e24dcca9e"
-
-let MaxCharacters = 20
-
-let BLEService_UUID = CBUUID(string: kBLEService_UUID)
-let BLE_Characteristic_uuid_Tx = CBUUID(string: kBLE_Characteristic_uuid_Tx)//(Property = Write without response)
-let BLE_Characteristic_uuid_Rx = CBUUID(string: kBLE_Characteristic_uuid_Rx)// (Property = Read/Notify)

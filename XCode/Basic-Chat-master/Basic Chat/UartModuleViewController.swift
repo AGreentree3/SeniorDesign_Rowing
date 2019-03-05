@@ -28,6 +28,7 @@ extension Data {
 class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, UITextViewDelegate, UITextFieldDelegate {
     
     //UI
+    @IBOutlet weak var readLabel: UILabel!
     @IBOutlet weak var baseTextView: UITextView!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var readButton: UIButton!
@@ -77,28 +78,23 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
     }
     
     @IBAction func clickReadAction(_ sender: Any) {
-        updateIncomingData()
-    }
-    
-    func updateIncomingData () {
-        if rxCharacteristic != nil{
+        if rxCharacteristic != nil {
             let data = rxCharacteristic!.value
             var byte = [UInt8](repeating:0, count:data!.count)
             data!.copyBytes(to: &byte, count: data!.count)
-            print(byte)
-            let stringFromByteArray = String(data: Data(bytes: byte), encoding: .utf8)
-            print(stringFromByteArray)
-            self.baseTextView.text = "Hello"
+            myString = "\(byte)"
+            readLabel.text=myString
         }
-       
-        //self.baseTextView.text = myString
-        /*
+    }
+    
+    func updateIncomingData () {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil){
             notification in
             let appendString = "\n"
             let myFont = UIFont(name: "Helvetica Neue", size: 15.0)
             let myAttributes2 = [NSFontAttributeName: myFont!, NSForegroundColorAttributeName: UIColor.red]
-            let attribString = NSAttributedString(string: "[Incoming]: " + (characteristicASCIIValue as String) + myString + appendString, attributes: myAttributes2)
+            
+            let attribString = NSAttributedString(string: "[Incoming]: " + myString + appendString, attributes: myAttributes2)
             let newAsciiText = NSMutableAttributedString(attributedString: self.consoleAsciiText!)
             self.baseTextView.attributedText = NSAttributedString(string: characteristicASCIIValue as String , attributes: myAttributes2)
             
@@ -106,9 +102,7 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
             
             self.consoleAsciiText = newAsciiText
             self.baseTextView.attributedText = self.consoleAsciiText
-            
         }
-        */
     }
     
     @IBAction func clickSendAction(_ sender: AnyObject) {
