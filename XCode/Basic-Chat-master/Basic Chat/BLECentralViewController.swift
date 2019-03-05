@@ -252,13 +252,11 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
     /*After you've found a characteristic of a service that you are interested in, you can read the characteristic's value by calling the peripheral "readValueForCharacteristic" method within the "didDiscoverCharacteristicsFor service" delegate.
      */
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        
         if characteristic == rxCharacteristic {
-            if let ASCIIstring = NSString(data: characteristic.value!, encoding: String.Encoding.utf8.rawValue) {
+            if let ASCIIstring = NSString(data: characteristic.value!, encoding: String.Encoding.utf8.rawValue){
                 characteristicASCIIValue = ASCIIstring
                 print("Value Recieved: \((characteristicASCIIValue as String))")
                 NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: nil)
-                
             }
         }
     }

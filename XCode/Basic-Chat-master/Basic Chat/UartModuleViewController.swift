@@ -35,8 +35,6 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var switchUI: UISwitch!
     
-    @IBAction func clickReadAction(_ sender: Any) {
-    }
     //Data
     var peripheralManager: CBPeripheralManager?
     var peripheral: CBPeripheral!
@@ -78,13 +76,29 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
         
     }
     
+    @IBAction func clickReadAction(_ sender: Any) {
+        updateIncomingData()
+    }
+    
     func updateIncomingData () {
+        if rxCharacteristic != nil{
+            let data = rxCharacteristic!.value
+            var byte = [UInt8](repeating:0, count:data!.count)
+            data!.copyBytes(to: &byte, count: data!.count)
+            print(byte)
+            let stringFromByteArray = String(data: Data(bytes: byte), encoding: .utf8)
+            print(stringFromByteArray)
+            self.baseTextView.text = "Hello"
+        }
+       
+        //self.baseTextView.text = myString
+        /*
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil){
             notification in
             let appendString = "\n"
             let myFont = UIFont(name: "Helvetica Neue", size: 15.0)
             let myAttributes2 = [NSFontAttributeName: myFont!, NSForegroundColorAttributeName: UIColor.red]
-            let attribString = NSAttributedString(string: "[Incoming]: " + (characteristicASCIIValue as String) + appendString, attributes: myAttributes2)
+            let attribString = NSAttributedString(string: "[Incoming]: " + (characteristicASCIIValue as String) + myString + appendString, attributes: myAttributes2)
             let newAsciiText = NSMutableAttributedString(attributedString: self.consoleAsciiText!)
             self.baseTextView.attributedText = NSAttributedString(string: characteristicASCIIValue as String , attributes: myAttributes2)
             
@@ -94,6 +108,7 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
             self.baseTextView.attributedText = self.consoleAsciiText
             
         }
+        */
     }
     
     @IBAction func clickSendAction(_ sender: AnyObject) {

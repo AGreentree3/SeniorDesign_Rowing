@@ -14,10 +14,15 @@ import CoreBluetooth
 //let kBLE_Characteristic_uuid_Tx = "0000FFF1-0000-1000-8000-00805F9B34FB"
 //let kBLE_Characteristic_uuid_Rx = "0000FFF2-0000-1000-8000-00805F9B34FB"
 
-//UUID for TI not advertised:
-let kBLEService_UUID = "F0001110-0451-4000-B000-000000000000"
-let kBLE_Characteristic_uuid_Tx = "F0001111-0451-4000-B000-000000000000"
-let kBLE_Characteristic_uuid_Rx = "F0001112-0451-4000-B000-000000000000"
+//UUID for TI LED service (not advertised in Project Zero)
+//let kBLEService_UUID = "F0001110-0451-4000-B000-000000000000"
+//let kBLE_Characteristic_uuid_Tx = "F0001111-0451-4000-B000-000000000000"
+//let kBLE_Characteristic_uuid_Rx = "F0001112-0451-4000-B000-000000000000"
+
+//UUID for TI Button service (not advertised in Project Zero)
+let kBLEService_UUID = "F0001120-0451-4000-B000-000000000000"
+let kBLE_Characteristic_uuid_Tx = "F0001121-0451-4000-B000-000000000000"
+let kBLE_Characteristic_uuid_Rx = "F0001122-0451-4000-B000-000000000000"
 
 //UUIDs for the Adafruit device:
 //let kBLEService_UUID = "6e400001-b5a3-f393-e0a9-e50e24dcca9e"
