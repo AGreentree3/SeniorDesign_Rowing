@@ -5,12 +5,14 @@
 %% Read File and parse data
 clear all
 
-M = csvread('WFeather_12_4_18.txt'); % Read in all raw data
+%M = csvread('WFeather_12_4_18.txt'); % Read in all raw data
+M = csvread("10NOFeather.txt");
 
 %Parse Data
 xg = M(:,4);    % x gyroscope
 yg = M(:,5);    % y gyroscope
 zg = M(:,6);    % z gyroscope
+ya = M(:,2);
 
 t = linspace(1,length(xg),length(xg))/100; % Generator time vector
 
@@ -31,22 +33,31 @@ for i=1:length(t)
     %plot(t(i),xg(i),'b.', t(i), zg(i), 'r.');
     %drawnow
      
-    if (xg(i)>2) && (state==0)
-         state = 1; 
-    end
-    
-    
-    if (xg(i)<=0) && (state==1)
-         state = 2; 
-    end
-     
-     %identifies catch
-     if (zg(i)<=-0.2) && (state==2)
-         num=num+1;
+%     if (xg(i)>2) && (state==0)
+%          state = 1; 
+%         plot([t(i),t(i)],[-8,6],'b-')
+%          drawnow
+%     end
+%     
+%     
+%     if (xg(i)<=0) && (state==1)
+%         plot([t(i),t(i)],[-8,6],'g-')
+%          drawnow
+%         state = 2; 
+%     end
+%      
+%      %identifies catch
+%      if (zg(i)<=-0.2) && (state==2)
+%          num=num+1;
+%          plot([t(i),t(i)],[-8,6],'r-')
+%          drawnow
+%          state=0;
+%      end
+
+    if (ya(i)<5 && zg(i)<0)
          plot([t(i),t(i)],[-8,6],'r-')
          drawnow
-         state=0;
-     end
+    end
     
 end
 
