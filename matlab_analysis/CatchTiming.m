@@ -25,9 +25,13 @@ state = 0; % waiting for square up to begin
 figure(1)
 hold on
 grid on
-axis([0, 45, -8, 6])
-plot(t, xg, 'k-', t, zg, 'b-')
+axis([0, 45, -2, 2])
+plot(t, ya/10, 'k-', t, zg, 'b-')
 num=0;
+
+
+newstate=0;
+timeChange=0;
 
 for i=1:length(t)
     %plot(t(i),xg(i),'b.', t(i), zg(i), 'r.');
@@ -53,15 +57,26 @@ for i=1:length(t)
 %          drawnow
 %          state=0;
 %      end
-
-    if (ya(i)<5 && zg(i)<0)
+    
+    if(newstate==0) %%not ready for catch
+        timeChange=timeChange+1;
+        if(timeChange>(length(t)/36)*1)
+            newstate=1;
+            timeChange=0;
+        end
+    
+        %%newstate=1, ready for catch
+    elseif(newstate==1 && ya(i)<10 && zg(i)<-0.2)
          plot([t(i),t(i)],[-8,6],'r-')
          drawnow
+         newstate=0;
+         num=num+1
     end
     
 end
 
-legend('X gyro', 'Z gyro');
+legend('Y accel/10', 'Z gyro');
+hold off
 %This method is not robust enough to deal with data outliers
 %Is the catch at the right point?
 %Worried about the accrual of time errors. Eventually should do analysis to
