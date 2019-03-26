@@ -8,14 +8,21 @@
 
 import CoreBluetooth
 //UUID for TI Button Service (not advertised in Project Zero)
-let kButtonService_UUID = "F0001120-0451-4000-B000-000000000000"
-let kButton1_Characteristic_uuid_Rx = "F0001121-0451-4000-B000-000000000000"
-let kButton2_Characteristic_uuid_Rx = "F0001122-0451-4000-B000-000000000000"
+//let kButtonService_UUID = "F0001120-0451-4000-B000-000000000000"
+//let kButton1_Characteristic_uuid_Rx = "F0001121-0451-4000-B000-000000000000"
+
+//let kButton2_Characteristic_uuid_Rx = "F0001122-0451-4000-B000-000000000000"
 
 //UUID for TI LED service (not advertised in Project Zero)
 let kLEDService_UUID = "F0001110-0451-4000-B000-000000000000"
 let kLED_Characteristic_uuid_Tx = "F0001111-0451-4000-B000-000000000000"
 let kLED_Characteristic_uuid_Rx = "F0001112-0451-4000-B000-000000000000"
+//UUID for IMU
+let kButtonService_UUID = "0xFFF0"
+let kButton1_Characteristic_uuid_Rx = "0xFFF4"
+
+let kButton2_Characteristic_uuid_Rx = "F0001122-0451-4000-B000-000000000000"
+
 
 //UUID That is actually being advertised in simple peripheral
 let kAdvert_UUID = "FFF0"

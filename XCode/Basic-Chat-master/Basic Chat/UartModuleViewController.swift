@@ -88,6 +88,7 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
     }
     
     func updateIncomingData () {
+       
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil){
             notification in
             let appendString = "\n"
@@ -102,7 +103,7 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
             
             self.consoleAsciiText = newAsciiText
             self.baseTextView.attributedText = self.consoleAsciiText
-        }
+           
     }
     
     @IBAction func clickSendAction(_ sender: AnyObject) {
