@@ -4,9 +4,12 @@
 %Team FrEE SpEEd
 %% Read File, parse data, filter
 clear all
+clf
 
-M = csvread('WFeather_12_4_18.txt'); % Read in all raw data
-M2 = csvread("10NOFeather.txt");
+ M = csvread('WFeather_12_4_18.txt'); % Read in all raw data
+ M2 = csvread("10NOFeather.txt");
+
+%M = csvread('featherandsquare_3_26.txt'); % Read in all raw data
 
 %Parse Data
 xg = M(:,4);
@@ -15,6 +18,7 @@ zg = M(:,6);
 xa = M(:,1);
 ya = M(:,2);
 za = M(:,3);
+
 
 xg2 = M2(:,4);
 yg2 = M2(:,5);
@@ -38,12 +42,12 @@ xa2 = xa2(100:length(xa2));
 ya2 = ya2(100:length(ya2));
 za2 = za2(100:length(za2));
 
-xg = [xg2;xg;xg2];
-yg = [yg2;yg;yg2];
-zg = [zg2;zg;zg2];
-xa = [xa2;xa;xa2];
-ya = [ya2;ya;ya2];
-za = [za2;za;za2];
+% xg = [xg2;xg;xg2];
+% yg = [yg2;yg;yg2];
+% zg = [zg2;zg;zg2];
+% xa = [xa2;xa;xa2];
+% ya = [ya2;ya;ya2];
+% za = [za2;za;za2];
 
 % Generate time vector
 readsPerSecond=100;
@@ -83,8 +87,6 @@ for i=1:length(t)
     %featherOrSquare = 0 blade is parallel to water, 1 blade is
     %perpendicular to water
     
-    
-    
     %Determine feathering state
     if(xg(i)<-1)
         featheringState = 1;
@@ -104,7 +106,7 @@ for i=1:length(t)
     
     
     %State machine for featherOrSquare
-    if(xg(i)<-2 && ya(i)<6 && featherOrSquare==1)
+    if(xg(i)<-3  && featherOrSquare==1) %&& ya(i)<10
         featheringState=1;
         featherOrSquare=0;
         plot([t(i),t(i)],[-8,6],'m-')
@@ -123,7 +125,7 @@ for i=1:length(t)
     %State machine for catches    
     if(ready4NewCatch==0) %%not ready for catch
         timeChange=timeChange+1;
-        if(timeChange>(length(t)/max(t))*1)
+        if(timeChange>readsPerSecond*1)
             ready4NewCatch=1;
             timeChange=0;
         end
@@ -142,13 +144,14 @@ for i=1:length(t)
                  reSquaredForCatch=0;
              end
             
-        elseif(featheringState==0 && zg(i)<-0.2)
+        elseif(featheringState==0 && zg(i)<-0.18)
              plot([t(i),t(i)],[-8,6],'r-')
              drawnow
              ready4NewCatch=0;
              numCatches=numCatches+1
         end
     end
+    
 end
 
 legend('Y accel/10', 'Z gyro', 'X gyro/10');

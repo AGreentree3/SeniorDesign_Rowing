@@ -1,4 +1,5 @@
 clear all
+clf
 
 %M = csvread("10NOFeather.txt");
 M = csvread('WFeather_12_4_18.txt');
@@ -46,6 +47,6 @@ subplot(3,3,9)
 plot(t,za)
 title('Z accel')
 
- figure(2)
- plot(t,zg*10,t,ya)
- legend('z gyro', 'y acceleration')
+%  figure(2)
+%  plot(t,zg*10,t,ya)
+%  legend('z gyro', 'y acceleration')
