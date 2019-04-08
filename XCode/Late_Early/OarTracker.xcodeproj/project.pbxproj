@@ -1,0 +1,639 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		289E67AD22529A1300E0C775 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289E67AC22529A1300E0C775 /* AppDelegate.swift */; };
+		289E67AF22529A1300E0C775 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289E67AE22529A1300E0C775 /* ViewController.swift */; };
+		289E67B222529A1300E0C775 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289E67B022529A1300E0C775 /* Main.storyboard */; };
+		289E67B422529A1500E0C775 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 289E67B322529A1500E0C775 /* Assets.xcassets */; };
+		289E67B722529A1500E0C775 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289E67B522529A1500E0C775 /* LaunchScreen.storyboard */; };
+		289E67C222529A1500E0C775 /* OarTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289E67C122529A1500E0C775 /* OarTrackerTests.swift */; };
+		289E67CD22529A1500E0C775 /* OarTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289E67CC22529A1500E0C775 /* OarTrackerUITests.swift */; };
+		28E4A00B2252D54C00C3A713 /* ConnectOarsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E4A00A2252D54C00C3A713 /* ConnectOarsController.swift */; };
+		28E4A00D2252D57F00C3A713 /* PeripheralsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E4A00C2252D57F00C3A713 /* PeripheralsListController.swift */; };
+		28E4A00F2252D69500C3A713 /* ReadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E4A00E2252D69500C3A713 /* ReadController.swift */; };
+		28E4A0112252D6A400C3A713 /* WriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E4A0102252D6A400C3A713 /* WriteController.swift */; };
+		28E4A0132252D6F200C3A713 /* OarCommunicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E4A0122252D6F200C3A713 /* OarCommunicationController.swift */; };
+		28FADA2322552810001F44D4 /* PeripheralsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FADA2222552810001F44D4 /* PeripheralsViewCell.swift */; };
+		28FADA2522552841001F44D4 /* ReadViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FADA2422552841001F44D4 /* ReadViewCell.swift */; };
+		28FADA2722552850001F44D4 /* WriteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FADA2622552850001F44D4 /* WriteViewCell.swift */; };
+		28FADA29225536F9001F44D4 /* UUIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FADA28225536F9001F44D4 /* UUIDKey.swift */; };
+		28FADA2C22553737001F44D4 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FADA2B22553737001F44D4 /* CoreFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		289E67BE22529A1500E0C775 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 289E67A122529A1300E0C775 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 289E67A822529A1300E0C775;
+			remoteInfo = OarTracker;
+		};
+		289E67C922529A1500E0C775 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 289E67A122529A1300E0C775 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 289E67A822529A1300E0C775;
+			remoteInfo = OarTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		289E67A922529A1300E0C775 /* OarTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OarTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		289E67AC22529A1300E0C775 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		289E67AE22529A1300E0C775 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		289E67B122529A1300E0C775 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		289E67B322529A1500E0C775 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		289E67B622529A1500E0C775 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		289E67B822529A1500E0C775 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		289E67BD22529A1500E0C775 /* OarTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OarTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		289E67C122529A1500E0C775 /* OarTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OarTrackerTests.swift; sourceTree = "<group>"; };
+		289E67C322529A1500E0C775 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		289E67C822529A1500E0C775 /* OarTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OarTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		289E67CC22529A1500E0C775 /* OarTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OarTrackerUITests.swift; sourceTree = "<group>"; };
+		289E67CE22529A1500E0C775 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28E4A00A2252D54C00C3A713 /* ConnectOarsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectOarsController.swift; sourceTree = "<group>"; };
+		28E4A00C2252D57F00C3A713 /* PeripheralsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralsListController.swift; sourceTree = "<group>"; };
+		28E4A00E2252D69500C3A713 /* ReadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadController.swift; sourceTree = "<group>"; };
+		28E4A0102252D6A400C3A713 /* WriteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteController.swift; sourceTree = "<group>"; };
+		28E4A0122252D6F200C3A713 /* OarCommunicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OarCommunicationController.swift; sourceTree = "<group>"; };
+		28FADA2222552810001F44D4 /* PeripheralsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralsViewCell.swift; sourceTree = "<group>"; };
+		28FADA2422552841001F44D4 /* ReadViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewCell.swift; sourceTree = "<group>"; };
+		28FADA2622552850001F44D4 /* WriteViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewCell.swift; sourceTree = "<group>"; };
+		28FADA28225536F9001F44D4 /* UUIDKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDKey.swift; sourceTree = "<group>"; };
+		28FADA2B22553737001F44D4 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		289E67A622529A1300E0C775 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28FADA2C22553737001F44D4 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		289E67BA22529A1500E0C775 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		289E67C522529A1500E0C775 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		289E67A022529A1300E0C775 = {
+			isa = PBXGroup;
+			children = (
+				289E67AB22529A1300E0C775 /* OarTracker */,
+				289E67C022529A1500E0C775 /* OarTrackerTests */,
+				289E67CB22529A1500E0C775 /* OarTrackerUITests */,
+				289E67AA22529A1300E0C775 /* Products */,
+				28FADA2A22553737001F44D4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		289E67AA22529A1300E0C775 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				289E67A922529A1300E0C775 /* OarTracker.app */,
+				289E67BD22529A1500E0C775 /* OarTrackerTests.xctest */,
+				289E67C822529A1500E0C775 /* OarTrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		289E67AB22529A1300E0C775 /* OarTracker */ = {
+			isa = PBXGroup;
+			children = (
+				289E67AC22529A1300E0C775 /* AppDelegate.swift */,
+				289E67AE22529A1300E0C775 /* ViewController.swift */,
+				289E67B022529A1300E0C775 /* Main.storyboard */,
+				289E67B322529A1500E0C775 /* Assets.xcassets */,
+				289E67B522529A1500E0C775 /* LaunchScreen.storyboard */,
+				289E67B822529A1500E0C775 /* Info.plist */,
+				28E4A00A2252D54C00C3A713 /* ConnectOarsController.swift */,
+				28E4A00C2252D57F00C3A713 /* PeripheralsListController.swift */,
+				28E4A00E2252D69500C3A713 /* ReadController.swift */,
+				28E4A0102252D6A400C3A713 /* WriteController.swift */,
+				28E4A0122252D6F200C3A713 /* OarCommunicationController.swift */,
+				28FADA2222552810001F44D4 /* PeripheralsViewCell.swift */,
+				28FADA2422552841001F44D4 /* ReadViewCell.swift */,
+				28FADA2622552850001F44D4 /* WriteViewCell.swift */,
+				28FADA28225536F9001F44D4 /* UUIDKey.swift */,
+			);
+			path = OarTracker;
+			sourceTree = "<group>";
+		};
+		289E67C022529A1500E0C775 /* OarTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				289E67C122529A1500E0C775 /* OarTrackerTests.swift */,
+				289E67C322529A1500E0C775 /* Info.plist */,
+			);
+			path = OarTrackerTests;
+			sourceTree = "<group>";
+		};
+		289E67CB22529A1500E0C775 /* OarTrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				289E67CC22529A1500E0C775 /* OarTrackerUITests.swift */,
+				289E67CE22529A1500E0C775 /* Info.plist */,
+			);
+			path = OarTrackerUITests;
+			sourceTree = "<group>";
+		};
+		28FADA2A22553737001F44D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28FADA2B22553737001F44D4 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		289E67A822529A1300E0C775 /* OarTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 289E67D122529A1500E0C775 /* Build configuration list for PBXNativeTarget "OarTracker" */;
+			buildPhases = (
+				289E67A522529A1300E0C775 /* Sources */,
+				289E67A622529A1300E0C775 /* Frameworks */,
+				289E67A722529A1300E0C775 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OarTracker;
+			productName = OarTracker;
+			productReference = 289E67A922529A1300E0C775 /* OarTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		289E67BC22529A1500E0C775 /* OarTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 289E67D422529A1500E0C775 /* Build configuration list for PBXNativeTarget "OarTrackerTests" */;
+			buildPhases = (
+				289E67B922529A1500E0C775 /* Sources */,
+				289E67BA22529A1500E0C775 /* Frameworks */,
+				289E67BB22529A1500E0C775 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				289E67BF22529A1500E0C775 /* PBXTargetDependency */,
+			);
+			name = OarTrackerTests;
+			productName = OarTrackerTests;
+			productReference = 289E67BD22529A1500E0C775 /* OarTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		289E67C722529A1500E0C775 /* OarTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 289E67D722529A1500E0C775 /* Build configuration list for PBXNativeTarget "OarTrackerUITests" */;
+			buildPhases = (
+				289E67C422529A1500E0C775 /* Sources */,
+				289E67C522529A1500E0C775 /* Frameworks */,
+				289E67C622529A1500E0C775 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				289E67CA22529A1500E0C775 /* PBXTargetDependency */,
+			);
+			name = OarTrackerUITests;
+			productName = OarTrackerUITests;
+			productReference = 289E67C822529A1500E0C775 /* OarTrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		289E67A122529A1300E0C775 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Abby Greentree";
+				TargetAttributes = {
+					289E67A822529A1300E0C775 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					289E67BC22529A1500E0C775 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 289E67A822529A1300E0C775;
+					};
+					289E67C722529A1500E0C775 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 289E67A822529A1300E0C775;
+					};
+				};
+			};
+			buildConfigurationList = 289E67A422529A1300E0C775 /* Build configuration list for PBXProject "OarTracker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 289E67A022529A1300E0C775;
+			productRefGroup = 289E67AA22529A1300E0C775 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				289E67A822529A1300E0C775 /* OarTracker */,
+				289E67BC22529A1500E0C775 /* OarTrackerTests */,
+				289E67C722529A1500E0C775 /* OarTrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		289E67A722529A1300E0C775 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				289E67B722529A1500E0C775 /* LaunchScreen.storyboard in Resources */,
+				289E67B422529A1500E0C775 /* Assets.xcassets in Resources */,
+				289E67B222529A1300E0C775 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		289E67BB22529A1500E0C775 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		289E67C622529A1500E0C775 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		289E67A522529A1300E0C775 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				289E67AF22529A1300E0C775 /* ViewController.swift in Sources */,
+				28E4A00F2252D69500C3A713 /* ReadController.swift in Sources */,
+				28E4A00D2252D57F00C3A713 /* PeripheralsListController.swift in Sources */,
+				28E4A0112252D6A400C3A713 /* WriteController.swift in Sources */,
+				28FADA2722552850001F44D4 /* WriteViewCell.swift in Sources */,
+				28FADA2522552841001F44D4 /* ReadViewCell.swift in Sources */,
+				28E4A00B2252D54C00C3A713 /* ConnectOarsController.swift in Sources */,
+				289E67AD22529A1300E0C775 /* AppDelegate.swift in Sources */,
+				28FADA2322552810001F44D4 /* PeripheralsViewCell.swift in Sources */,
+				28E4A0132252D6F200C3A713 /* OarCommunicationController.swift in Sources */,
+				28FADA29225536F9001F44D4 /* UUIDKey.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		289E67B922529A1500E0C775 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				289E67C222529A1500E0C775 /* OarTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		289E67C422529A1500E0C775 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				289E67CD22529A1500E0C775 /* OarTrackerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		289E67BF22529A1500E0C775 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 289E67A822529A1300E0C775 /* OarTracker */;
+			targetProxy = 289E67BE22529A1500E0C775 /* PBXContainerItemProxy */;
+		};
+		289E67CA22529A1500E0C775 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 289E67A822529A1300E0C775 /* OarTracker */;
+			targetProxy = 289E67C922529A1500E0C775 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		289E67B022529A1300E0C775 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				289E67B122529A1300E0C775 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		289E67B522529A1500E0C775 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				289E67B622529A1500E0C775 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		289E67CF22529A1500E0C775 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		289E67D022529A1500E0C775 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		289E67D222529A1500E0C775 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H2LJ5YKXU6;
+				INFOPLIST_FILE = OarTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frEEspEEd.OarTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		289E67D322529A1500E0C775 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H2LJ5YKXU6;
+				INFOPLIST_FILE = OarTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frEEspEEd.OarTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		289E67D522529A1500E0C775 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H2LJ5YKXU6;
+				INFOPLIST_FILE = OarTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frEEspEEd.OarTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OarTracker.app/OarTracker";
+			};
+			name = Debug;
+		};
+		289E67D622529A1500E0C775 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H2LJ5YKXU6;
+				INFOPLIST_FILE = OarTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frEEspEEd.OarTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OarTracker.app/OarTracker";
+			};
+			name = Release;
+		};
+		289E67D822529A1500E0C775 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H2LJ5YKXU6;
+				INFOPLIST_FILE = OarTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frEEspEEd.OarTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OarTracker;
+			};
+			name = Debug;
+		};
+		289E67D922529A1500E0C775 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H2LJ5YKXU6;
+				INFOPLIST_FILE = OarTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frEEspEEd.OarTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OarTracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		289E67A422529A1300E0C775 /* Build configuration list for PBXProject "OarTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				289E67CF22529A1500E0C775 /* Debug */,
+				289E67D022529A1500E0C775 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		289E67D122529A1500E0C775 /* Build configuration list for PBXNativeTarget "OarTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				289E67D222529A1500E0C775 /* Debug */,
+				289E67D322529A1500E0C775 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		289E67D422529A1500E0C775 /* Build configuration list for PBXNativeTarget "OarTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				289E67D522529A1500E0C775 /* Debug */,
+				289E67D622529A1500E0C775 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		289E67D722529A1500E0C775 /* Build configuration list for PBXNativeTarget "OarTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				289E67D822529A1500E0C775 /* Debug */,
+				289E67D922529A1500E0C775 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 289E67A122529A1300E0C775 /* Project object */;
+}
