@@ -10,7 +10,7 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+//This was never changed from the what it loads at the start of any project
     var window: UIWindow?
 
 

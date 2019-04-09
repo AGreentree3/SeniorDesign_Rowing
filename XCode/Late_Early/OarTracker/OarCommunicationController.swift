@@ -6,6 +6,8 @@
 //  Copyright © 2019 Abby Greentree. All rights reserved.
 //
 
+//This class sets up the Read and Write Pages with the swipe functionality
+
 import UIKit
 
 class OarCommunicationController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource{
