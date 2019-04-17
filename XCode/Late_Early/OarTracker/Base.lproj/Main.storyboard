@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OarTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OarTracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUS-Jq-jXr">
+                                <rect key="frame" x="47" y="124" width="227" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.86820315670000003" blue="0.33258468600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="an app by FrEE SpEEd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNY-PZ-iAc">
+                                <rect key="frame" x="63" y="401" width="194" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.86820315670000003" blue="0.33258468600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OarIcon" translatesAutoresizingMaskIntoConstraints="NO" id="vnS-en-HVw">
+                                <rect key="frame" x="40" y="176" width="240" height="217"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.2031893904" blue="0.23905456850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Sj2-LJ-f41" appends="YES" id="HUd-Nl-W6Y"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Sj2-LJ-f41">
+                    <connections>
+                        <segue destination="a6R-j0-n7I" kind="presentation" id="0Wt-wg-4ET"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="108" y="26.53673163418291"/>
+        </scene>
+        <!--Connect Oars Controller-->
+        <scene sceneID="BC4-VB-tr6">
+            <objects>
+                <viewController id="a6R-j0-n7I" customClass="ConnectOarsController" customModule="OarTracker" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XvT-pS-fss">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Currently connected to: " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYH-G6-3dd">
+                                <rect key="frame" x="16" y="112" width="284" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="24"/>
+                                <color key="textColor" red="0.86763752380000003" green="1" blue="0.91933638510000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DX-nx-SW4">
+                                <rect key="frame" x="34" y="243" width="252" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.86820315670000003" blue="0.33258468600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Connect Another Oar">
+                                    <color key="titleColor" red="0.0" green="0.2031893904" blue="0.23905456850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="0.0" green="0.2031893904" blue="0.23905456850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickConnect:" destination="a6R-j0-n7I" eventType="touchUpInside" id="wXL-dL-Yny"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hK-Mz-ZKA">
+                                <rect key="frame" x="34" y="373" width="252" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.86820315670000003" blue="0.33258468600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Finished">
+                                    <color key="titleColor" red="0.0" green="0.2031893904" blue="0.23905456850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickFinished:" destination="a6R-j0-n7I" eventType="touchUpInside" id="Nb9-5H-PIu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OarNo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jm-A2-RpN">
+                                <rect key="frame" x="121" y="155" width="79" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="24"/>
+                                <color key="textColor" red="0.86763752380000003" green="1" blue="0.91933638510000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.52740323600000005" blue="0.4879833073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Hc7-QL-IIG"/>
+                    </view>
+                    <connections>
+                        <outlet property="connectButton" destination="8DX-nx-SW4" id="6Zt-Ay-Fos"/>
+                        <outlet property="finishedButton" destination="7hK-Mz-ZKA" id="lKh-bo-Mlu"/>
+                        <outlet property="oarNum" destination="7jm-A2-RpN" id="OO0-eF-PGg"/>
+                        <segue destination="9s7-dv-gXw" kind="presentation" identifier="ConnecttoPeripherals" id="oZt-iB-wmY"/>
+                        <segue destination="wXA-8O-pwD" kind="presentation" identifier="ConnecttoComm" id="g71-2y-caR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bfx-5r-qLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="819.375" y="26.408450704225352"/>
+        </scene>
+        <!--Peripherals List Controller-->
+        <scene sceneID="gT0-zI-Kv1">
+            <objects>
+                <viewController id="9s7-dv-gXw" customClass="PeripheralsListController" customModule="OarTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vmx-8Z-at5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zm7-Jo-C9J">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Peripherals" id="l6g-Ia-VWC">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="stop" id="QK5-8f-Wsk">
+                                            <connections>
+                                                <action selector="clickBack:" destination="9s7-dv-gXw" id="E3t-La-48v"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="8Zl-5r-1da">
+                                            <connections>
+                                                <action selector="clickDone:" destination="9s7-dv-gXw" id="N3x-KV-7kB"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CbK-i1-Hb0">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.86820315670000003" blue="0.33258468600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.0" green="0.2031893904" blue="0.23905456850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PeripheralsViewCell" rowHeight="90" id="EqT-oS-Ynp" customClass="PeripheralsViewCell" customModule="OarTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EqT-oS-Ynp" id="VfN-r5-roS">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="deviceName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfR-K0-azX">
+                                                    <rect key="frame" x="32" y="11" width="209" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.2031893904" blue="0.23905456850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RSSI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yay-sm-wVj">
+                                                    <rect key="frame" x="32" y="51" width="36" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.86820315670000003" blue="0.33258468600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="RSSI" destination="Yay-sm-wVj" id="GE7-Ow-IdB"/>
+                                            <outlet property="deviceName" destination="wfR-K0-azX" id="Kx9-Cn-TFS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.86820315674180859" blue="0.33258468596129187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="9h2-W0-307"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="QK5-8f-Wsk" id="Tlc-kw-z1D"/>
+                        <outlet property="doneButton" destination="8Zl-5r-1da" id="co0-Zc-jLZ"/>
+                        <outlet property="tableView" destination="CbK-i1-Hb0" id="kvg-U6-0mp"/>
+                        <segue destination="a6R-j0-n7I" kind="presentation" identifier="peripheralsBack" id="vy3-fz-uxk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4h0-2c-Z35" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1565.625" y="-357.04225352112678"/>
+        </scene>
+        <!--Oar Communication Controller-->
+        <scene sceneID="qyk-81-6vB">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="wXA-8O-pwD" customClass="OarCommunicationController" customModule="OarTracker" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e3i-bF-cix" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1566" y="344"/>
+        </scene>
+        <!--Write Controller-->
+        <scene sceneID="Ke6-dR-Jot">
+            <objects>
+                <viewController storyboardIdentifier="WriteController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YJz-Mz-S9C" customClass="WriteController" customModule="OarTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KtA-JI-D2p">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exV-gn-mi8">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Write" id="ksv-Ql-2Bp">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="stop" id="X1v-P0-Lqj">
+                                            <connections>
+                                                <action selector="backButton:" destination="YJz-Mz-S9C" id="DnY-I0-DHb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m5a-7z-SGC">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WriteViewCell" rowHeight="90" id="OVB-q7-BWG">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OVB-q7-BWG" id="x8v-5F-Paa">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11862089786380417" green="0.0" blue="0.24647049492385786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6aP-8X-gNZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="X1v-P0-Lqj" id="sAG-if-uSH"/>
+                        <outlet property="tableView" destination="m5a-7z-SGC" id="1B1-cC-eUd"/>
+                        <segue destination="a6R-j0-n7I" kind="presentation" identifier="writeBack" id="pCg-YF-Er5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="41D-g9-XMP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2268.75" y="765.84507042253517"/>
+        </scene>
+        <!--Read Controller-->
+        <scene sceneID="ZFo-LK-6Tg">
+            <objects>
+                <viewController storyboardIdentifier="ReadController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ahw-st-UJV" customClass="ReadController" customModule="OarTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wpB-49-QUO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q5t-wW-z2F">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Read" id="trZ-k2-T36">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="stop" id="kBS-g9-8lj">
+                                            <connections>
+                                                <action selector="clickBack:" destination="ahw-st-UJV" id="Z1T-2L-XBz"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5y4-ya-Oa7">
+                                <rect key="frame" x="0.0" y="115" width="320" height="453"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.0" green="0.2031893904" blue="0.23905456850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ReadViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReadViewCell" rowHeight="90" id="Hsa-d8-osI" customClass="ReadViewCell" customModule="OarTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hsa-d8-osI" id="VQl-oD-EgN">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMh-yn-IG2">
+                                                    <rect key="frame" x="258" y="5" width="47" height="28"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.2031893904" blue="0.23905456850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Read">
+                                                        <color key="titleColor" red="1" green="0.86820315670000003" blue="0.33258468600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="clickRead:" destination="Hsa-d8-osI" eventType="touchUpInside" id="Vng-RH-td1"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGV-1V-b86">
+                                                    <rect key="frame" x="15" y="41" width="60" height="20.5"/>
+                                                    <color key="backgroundColor" red="1" green="0.86820315670000003" blue="0.33258468600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.2031893904" blue="0.23905456850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Late" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2d-Hh-DPO">
+                                                    <rect key="frame" x="266" y="50" width="34" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F37-dD-9gP">
+                                                    <rect key="frame" x="15" y="5" width="102" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.2031893904" blue="0.23905456850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="F37-dD-9gP" firstAttribute="top" secondItem="VQl-oD-EgN" secondAttribute="top" constant="5" id="8zY-Dn-NsT"/>
+                                                <constraint firstItem="cGV-1V-b86" firstAttribute="leading" secondItem="VQl-oD-EgN" secondAttribute="leading" constant="15" id="AOw-G4-1xC"/>
+                                                <constraint firstAttribute="trailing" secondItem="s2d-Hh-DPO" secondAttribute="trailing" constant="15" id="BkS-ej-6X9"/>
+                                                <constraint firstItem="cGV-1V-b86" firstAttribute="top" secondItem="F37-dD-9gP" secondAttribute="bottom" constant="15" id="SXa-ed-yev"/>
+                                                <constraint firstAttribute="bottom" secondItem="cGV-1V-b86" secondAttribute="bottom" constant="10" id="Sgy-Hu-niT"/>
+                                                <constraint firstAttribute="trailing" secondItem="EMh-yn-IG2" secondAttribute="trailing" constant="15" id="Xtf-dU-3Az"/>
+                                                <constraint firstItem="s2d-Hh-DPO" firstAttribute="top" secondItem="EMh-yn-IG2" secondAttribute="bottom" constant="15" id="bVM-mX-Ghi"/>
+                                                <constraint firstAttribute="bottom" secondItem="s2d-Hh-DPO" secondAttribute="bottom" constant="10" id="k37-yS-YVx"/>
+                                                <constraint firstItem="EMh-yn-IG2" firstAttribute="top" secondItem="VQl-oD-EgN" secondAttribute="top" constant="5" id="n1O-Sq-t4Z"/>
+                                                <constraint firstItem="F37-dD-9gP" firstAttribute="leading" secondItem="VQl-oD-EgN" secondAttribute="leading" constant="15" id="sQO-jl-RbG"/>
+                                                <constraint firstItem="s2d-Hh-DPO" firstAttribute="centerY" secondItem="cGV-1V-b86" secondAttribute="centerY" id="wCM-sg-5KY"/>
+                                                <constraint firstItem="s2d-Hh-DPO" firstAttribute="leading" secondItem="cGV-1V-b86" secondAttribute="trailing" constant="191" id="ybC-kY-kAU"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Sgy-Hu-niT"/>
+                                                    <exclude reference="k37-yS-YVx"/>
+                                                    <exclude reference="wCM-sg-5KY"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.86763752380000003" green="1" blue="0.91933638510000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="ReadViewCell">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
+                                        <connections>
+                                            <outlet property="charValue" destination="cGV-1V-b86" id="GrY-MG-5sb"/>
+                                            <outlet property="deviceName" destination="F37-dD-9gP" id="aQE-xU-LL1"/>
+                                            <outlet property="readButton" destination="EMh-yn-IG2" id="ffY-jK-xMU"/>
+                                            <outlet property="stateLabel" destination="s2d-Hh-DPO" id="4Tl-E5-HaK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ipG-I1-qFa">
+                                <rect key="frame" x="41" y="75" width="238" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Single Read"/>
+                                    <segment title="Continuous Read"/>
+                                </segments>
+                                <connections>
+                                    <action selector="readTypeChange:" destination="ahw-st-UJV" eventType="valueChanged" id="R73-hk-N8b"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.86763752380897552" green="1" blue="0.91933638509399407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="eGT-ON-XAU"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="kBS-g9-8lj" id="9qW-wA-CNg"/>
+                        <outlet property="readController" destination="ipG-I1-qFa" id="hPu-1A-ljm"/>
+                        <outlet property="tableView" destination="5y4-ya-Oa7" id="nEg-lh-6pG"/>
+                        <segue destination="a6R-j0-n7I" kind="presentation" identifier="readBack" id="dU7-JJ-FQO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ve-PH-CKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2268.75" y="64.436619718309856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="OarIcon" width="372.3636474609375" height="372.3636474609375"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="dU7-JJ-FQO"/>
+    </inferredMetricsTieBreakers>
+</document>
