@@ -10,6 +10,7 @@ clf
 %M = csvread('data_med_4-3.txt'); % Read in all raw data
 M = csvread('data_short_4-3.txt'); % Read in all raw data
 
+
 %Parse Data
 millis = M(:,11);
 xg = M(:,4);
@@ -75,7 +76,7 @@ for i=1:length(t)
         plot([t(i),t(i)],[-8,6],'m-')
         drawnow
         numFeathers=numFeathers+1;
-    elseif(xg(i)>1.5 && ya(i)>6 && featherOrSquare==0)
+    elseif(xg(i)>0.8 && ya(i)>6 && featherOrSquare==0)
         featheringState=1;
         featherOrSquare=1;
         reSquaredForCatch=1; %for catch state machine
