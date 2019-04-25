@@ -13,8 +13,8 @@ M2 = [];
 %M = csvread('data_med_4-3.txt'); % Read in all raw data
 %M = csvread('data_short_4-3.txt'); % Read in all raw data
 
-%M = csvread('ontimeearlyontimelateontime.txt');
-M = csvread('square.txt');
+M = csvread('ontimeearlyontimelateontime.txt');
+%M = csvread('square.txt');
 %M = csvread('feather.txt');
 %M = csvread('settingtheboat.txt');
 %M = csvread('slap.txt');
@@ -71,10 +71,10 @@ t = linspace(1,length(xg),length(xg))/readsPerSecond;
 %smoothing
 % ya = movmean(ya,40);
 
-%had to make this change
+%had to make this change since i messed up mounting the sensor, I think
 zg = -zg;
 
-%if oar is port, make the following changes, i think
+%if oar is port, make the following changes
 zg2 = -zg2;
 xg2=-xg2;
 %% Create figure
@@ -170,7 +170,7 @@ for i=1:length(t)
         end
 
         
-        if(featheringState==1 && zg(i-3)<-0.45 && zg(i)>zg(i-1) && zg(i-1)>=zg(i-2) && zg(i-2)>=zg(i-3)...
+        if(featheringState==1 && zg(i-4)<-0.45 && zg(i)>zg(i-1) && zg(i-1)>=zg(i-2) && zg(i-2)>=zg(i-3) && zg(i-3)>=zg(i-4)...
                 &&sharpDipZg==1) % && reSquaredForCatch==1)
              pause(0.1)
              plot([t(i),t(i)],[-8,6],'r-')
@@ -181,7 +181,7 @@ for i=1:length(t)
              readsPerStrokeCount = 0;
 
 
-        elseif(featheringState==0 && zg(i-3)<-0.45 && zg(i)>zg(i-1) && zg(i-1)>=zg(i-2) && zg(i-2)>=zg(i-3) ...
+        elseif(featheringState==0 && zg(i-4)<-0.45 && zg(i)>zg(i-1) && zg(i-1)>=zg(i-2) && zg(i-2)>=zg(i-3)&& zg(i-3)>=zg(i-4) ...
                 && (abs(ya(i-2)-ya(i-3)+abs(ya(i-1)-ya(i-2))) > 1.0 )...
                 && sharpDipZg==1)    
              pause(0.1) 
