@@ -13,8 +13,8 @@ M2 = [];
 %M = csvread('data_med_4-3.txt'); % Read in all raw data
 %M = csvread('data_short_4-3.txt'); % Read in all raw data
 
-M = csvread('ontimeearlyontimelateontime.txt');
-%M = csvread('square.txt');
+%M = csvread('ontimeearlyontimelateontime.txt');
+M = csvread('square.txt');
 %M = csvread('feather.txt');
 %M = csvread('settingtheboat.txt');
 %M = csvread('slap.txt');
@@ -106,9 +106,13 @@ readsPerStrokeCount = 0;
 secsPerStroke = 3;
 featherOrSquare=1; %assume starting on the square
 sharpDipZg=0;
-firstCatch = 0;
 
 %% Input data and analyze
+
+zg=zg2;
+xg=xg2;
+ya=ya2;
+
 for i=1:length(t)
     
     %featheringState = whether feathering is happening
@@ -151,7 +155,7 @@ for i=1:length(t)
     %State machine for catches    
     if(ready4NewCatch==0) %not ready for catch
         timeChange=timeChange+1;
-        if(timeChange>readsPerSecond*secsPerStroke*0.5)
+        if(timeChange>readsPerSecond*secsPerStroke*0.5) || (timeChange>readsPerSecond*3)
             ready4NewCatch=1;
             timeChange=0;
         end
@@ -172,13 +176,9 @@ for i=1:length(t)
              plot([t(i),t(i)],[-8,6],'r-')
              drawnow
              ready4NewCatch=0;
-             numCatches=numCatches+1;
-             
-             if firstCatch~=0
-                 secsPerStroke = readsPerStrokeCount/readsPerSecond
-             end
+             numCatches=numCatches+1;             
+             secsPerStroke = readsPerStrokeCount/readsPerSecond
              readsPerStrokeCount = 0;
-             firstCatch=1;
 
 
         elseif(featheringState==0 && zg(i-3)<-0.45 && zg(i)>zg(i-1) && zg(i-1)>=zg(i-2) && zg(i-2)>=zg(i-3) ...
@@ -188,13 +188,9 @@ for i=1:length(t)
              plot([t(i),t(i)],[-8,6],'r--')
              drawnow
              ready4NewCatch=0; 
-             numCatches=numCatches+1;
-             
-             if firstCatch~=0
-                 secsPerStroke = readsPerStrokeCount/readsPerSecond
-             end
+             numCatches=numCatches+1;             
+             secsPerStroke = readsPerStrokeCount/readsPerSecond
              readsPerStrokeCount = 0;
-             firstCatch=1;
              
              %reSquaredForCatch=0;
         end   
