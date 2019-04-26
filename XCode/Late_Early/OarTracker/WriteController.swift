@@ -9,7 +9,7 @@
 import UIKit
 
 class WriteController: UIViewController {
-//Haven't done anything here yet
+
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {

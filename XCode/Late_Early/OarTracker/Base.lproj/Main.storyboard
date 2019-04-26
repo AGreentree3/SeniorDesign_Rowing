@@ -289,9 +289,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMh-yn-IG2">
-                                                    <rect key="frame" x="258" y="5" width="47" height="28"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMh-yn-IG2">
+                                                    <rect key="frame" x="250" y="5" width="55" height="37"/>
                                                     <color key="backgroundColor" red="0.0" green="0.2031893904" blue="0.23905456850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="37" id="5lH-Lh-p5z"/>
+                                                        <constraint firstAttribute="width" constant="55" id="koU-SM-OCq"/>
+                                                    </constraints>
                                                     <state key="normal" title="Read">
                                                         <color key="titleColor" red="1" green="0.86820315670000003" blue="0.33258468600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -307,7 +311,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Late" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2d-Hh-DPO">
-                                                    <rect key="frame" x="266" y="50" width="34" height="20.5"/>
+                                                    <rect key="frame" x="266" y="57" width="34" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

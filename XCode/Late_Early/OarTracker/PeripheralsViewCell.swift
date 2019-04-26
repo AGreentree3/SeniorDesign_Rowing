@@ -9,7 +9,7 @@
 import UIKit
 
 class PeripheralsViewCell: UITableViewCell {
-//These are the cells for the peripherals list view page
+
     @IBOutlet weak var deviceName: UILabel!
     @IBOutlet weak var RSSI: UILabel!
     

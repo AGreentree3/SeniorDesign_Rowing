@@ -92,6 +92,7 @@
 									<listOptionValue builtIn="false" value="BOARD_DISPLAY_USE_UART=1"/>
 									<listOptionValue builtIn="false" value="BOARD_DISPLAY_USE_UART_ANSI=1"/>
 									<listOptionValue builtIn="false" value="CC2640R2_LAUNCHXL"/>
+									<listOptionValue builtIn="false" value="ROW_CUSTOM"/>
 									<listOptionValue builtIn="false" value="CC26XX"/>
 									<listOptionValue builtIn="false" value="CC26XX_R2"/>
 									<listOptionValue builtIn="false" value="ICALL_EVENTS"/>

@@ -11,9 +11,9 @@ import CoreBluetooth
 
 
 //UUID for TI Button Service (not advertised in Project Zero)
-let kButtonService_UUID = "F0001120-0451-4000-B000-000000000000"
-let kButton1_Characteristic_uuid_Rx = "F0001121-0451-4000-B000-000000000000"
-let kButton2_Characteristic_uuid_Rx = "F0001122-0451-4000-B000-000000000000"
+let kButtonService_UUID = "FFF0"
+let kButton1_Characteristic_uuid_Rx = "FFF2"
+//let kButton2_Characteristic_uuid_Rx = "F0001122-0451-4000-B000-000000000000"
 
 //UUID for TI LED service (not advertised in Project Zero)
 let kLEDService_UUID = "F0001110-0451-4000-B000-000000000000"
@@ -30,7 +30,7 @@ let Advert2_UUID = CBUUID(string: "6e400001-b5a3-f393-e0a9-e50e24dcca9e")
 
 let RX_UUID = CBUUID(string: kButtonService_UUID)
 let Button1_Characteristic_uuid_Rx = CBUUID(string: kButton1_Characteristic_uuid_Rx)// (Property = Read from Button 1)
-let Button2_Characteristic_uuid_Rx = CBUUID(string: kButton2_Characteristic_uuid_Rx)// (Property = Read from Button 2)
+//let Button2_Characteristic_uuid_Rx = CBUUID(string: kButton2_Characteristic_uuid_Rx)// (Property = Read from Button 2)
 
 let TX_UUID = CBUUID(string: kLEDService_UUID)
 let LED_Characteristic_uuid_Tx = CBUUID(string: kLED_Characteristic_uuid_Tx)// (Property = Read from Button 1)

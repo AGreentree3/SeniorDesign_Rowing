@@ -6,53 +6,40 @@
 //  Copyright © 2019 Abby Greentree. All rights reserved.
 //
 
-//This is the screen that allows the user to add more oars or finish and move onto the read/write screen
-//This controller is where the CB Central Manager is declared
-
 import Foundation
 import UIKit
 import CoreBluetooth
 
-//Global Variables
 var txCharacteristic : [CBCharacteristic?] = []
 var rxCharacteristic : [CBCharacteristic?] = []
-
-//ConnectedDevices is the array that will store all the devices the user clicks on.
-//ConnectedDevice must be a global array, because its refered in this screen, the add oars screen, and the read write screen
+//var blePeripherals : [CBPeripheral?] = []
 var connectedDevices : [CBPeripheral?] = []
-
 var characteristicASCIIValue = NSString()
 var myString: String = "Null"
 var numDevices: Int = 2
 var deviceIndex: Int = 0
 
-//This variable declares an instance of the view controller page so that other controllers can reference this page's private variables and functions.
+
 var ConnectPage = ConnectOarsController()
 
 class ConnectOarsController : UIViewController, CBPeripheralDelegate, CBCentralManagerDelegate {
-    
-    //Outlets
+
     @IBOutlet weak var oarNum: UILabel!
     @IBOutlet weak var connectButton: UIButton!
     @IBOutlet weak var finishedButton: UIButton!
     
-    //Segue Actions
     @IBAction func clickConnect(_ sender: Any) {
-        //The segue is defined in the main storyboard.
         performSegue(withIdentifier: "ConnecttoPeripherals", sender: self)
     }
     @IBAction func clickFinished(_ sender: Any) {
         performSegue(withIdentifier: "ConnecttoComm", sender: self)
-        //When the user clicks finished is when the CB Central Manager searches the peripherals clicked for their RX and TX Characteristics. This is not great design but it works for now.
-        //Connecting to devices takes longer than the next page takes to load so you need to wait about 3 seconds after clicking finished to actually start reading or writing to the devices
-        
         let totNum = connectedDevices.count - 1
         for n in 0...totNum {
             connectToDevice(deviceNum: n)
         }
     }
     
-    //Private Variables
+    //Data
     var centralManager : CBCentralManager!
     var RSSIs = [NSNumber]()
     var data = NSMutableData()
@@ -79,14 +66,11 @@ class ConnectOarsController : UIViewController, CBPeripheralDelegate, CBCentralM
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //This function is called everytime the view reloads
+        //disconnectAllConnection()
         super.viewDidAppear(animated)
-
+        //refreshScanView()
         print("View Cleared")
-        //Print how many Oars the user has clicked on
         self.oarNum.text = String(connectedDevices.count) + " Oars"
-        
-        // Disable the finished button until the user has clicked at least 1 oar to connect to
         if (connectedDevices.count != 0){
             finishedButton.isEnabled = true
         }
@@ -95,12 +79,11 @@ class ConnectOarsController : UIViewController, CBPeripheralDelegate, CBCentralM
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("Stop Scanning")
-        //Stop scanning when you move onto the next page
         centralManager?.stopScan()
     }
     
+    /*Okay, now that we have our CBCentalManager up and running, it's time to start searching for devices. You can do this by calling the "scanForPeripherals" method.*/
     
-    //The below functions are the same as the origin BLE App except for a few visual things that were removed
     func startScan() {
         peripherals = []
         print("Now Scanning...")
