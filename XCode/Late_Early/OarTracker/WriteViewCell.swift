@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//Haven't done anything with these cells yet
+
 class WriteViewCell: UITableViewCell {
 
     override func awakeFromNib() {
