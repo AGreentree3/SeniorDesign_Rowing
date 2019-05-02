@@ -13,13 +13,13 @@ M2 = [];
 %M = csvread('data_med_4-3.txt'); % Read in all raw data
 %M = csvread('data_short_4-3.txt'); % Read in all raw data
 
-M = csvread('ontimeearlyontimelateontime.txt');
+%M = csvread('ontimeearlyontimelateontime.txt');
 %M = csvread('square.txt');
 %M = csvread('feather.txt');
 %M = csvread('settingtheboat.txt');
 %M = csvread('slap.txt');
 %M = csvread('buildonfeather.txt');
-%M = csvread('squarefeathersquare.txt');
+M = csvread('squarefeathersquare.txt');
 M = M(100:length(M),:); %remove start of data since all zeros
 
 %making sure M1 and M2 are same length
@@ -81,16 +81,16 @@ xg2=-xg2;
 figure(1)
 hold on
 grid on
- axis([0, max(t), -2-5, 2])
-%axis([0, max(t), -2, 2])
-plot(t, ya/10, 'k-')
+ %axis([0, max(t), -2-5, 2])
+axis([0, max(t), -2, 2])
+plot(t, movmean(ya,20)/10, 'k-')
 plot(t, zg, 'b-')
 plot(t, xg/10, 'g-')
 
 %Need to figure out why this works, which is port vs starboard
-plot(t, ya2/10 -5, 'k-')
-plot(t, zg2 -5, 'b-')
-plot(t, xg2/10 -5, 'g-')
+% plot(t, ya2/10 -5, 'k-')
+% plot(t, zg2 -5, 'b-')
+% plot(t, xg2/10 -5, 'g-')
 
 %% Initialize variables
 numCatches=0;
@@ -109,9 +109,9 @@ sharpDipZg=0;
 
 %% Input data and analyze
 
-zg=zg2;
-xg=xg2;
-ya=ya2;
+% zg=zg2;
+% xg=xg2;
+% ya=ya2;
 
 for i=1:length(t)
     
@@ -302,6 +302,8 @@ end
 % 
 % end
 
-legend('Y accel/10', 'Z gyro', 'X gyro/10');
-plot(t,featheringStateRecord,'k')
+legend('Y acceleration/10 (m/s^{2}) (smoothed)', 'Z gyro (rad/s)', 'X gyro/10 (rad/s)')
+xlabel('Seconds')
+ylabel('IMU readings')
+%plot(t,featheringStateRecord,'k')
 hold off
